@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Virat Kohli Portfolio</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#0f172a;
+      color:white;
+      line-height:1.7;
+    }
+
+    header{
+      background:linear-gradient(to right,#ff512f,#dd2476);
+      padding:20px;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    nav h1{
+      font-size:32px;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+    }
+
+    nav ul li{
+      margin-left:20px;
+    }
+
+    nav ul li a{
+      text-decoration:none;
+      color:white;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:yellow;
+    }
+
+    .hero{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:center;
+      padding:60px 20px;
+      min-height:100vh;
+    }
+
+    .hero-text{
+      flex:1;
+      min-width:300px;
+      padding:20px;
+    }
+
+    .hero-text h2{
+      font-size:55px;
+      color:#ffcc00;
+    }
+
+    .hero-text p{
+      margin-top:20px;
+      font-size:18px;
+    }
+
+    .hero-image{
+      flex:1;
+      text-align:center;
+      min-width:300px;
+    }
+
+    .hero-image img{
+      width:350px;
+      border-radius:20px;
+      border:5px solid white;
+      box-shadow:0px 0px 20px rgba(255,255,255,0.5);
+    }
+
+    section{
+      padding:60px 30px;
+    }
+
+    h3{
+      text-align:center;
+      font-size:40px;
+      margin-bottom:30px;
+      color:#ffcc00;
+    }
+
+    .card{
+      background:#1e293b;
+      padding:25px;
+      border-radius:15px;
+      margin-bottom:25px;
+      box-shadow:0px 0px 10px rgba(255,255,255,0.1);
+    }
+
+    .stats{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+    }
+
+    .stat-box{
+      background:#111827;
+      padding:30px;
+      border-radius:15px;
+      text-align:center;
+      transition:0.3s;
+    }
+
+    .stat-box:hover{
+      transform:scale(1.05);
+      background:#ff512f;
+    }
+
+    .stat-box h4{
+      font-size:35px;
+      color:#ffcc00;
+    }
+
+    footer{
+      background:black;
+      text-align:center;
+      padding:20px;
+      margin-top:40px;
+    }
+
+    .timeline{
+      border-left:4px solid #ffcc00;
+      padding-left:20px;
+    }
+
+    .timeline div{
+      margin-bottom:25px;
+    }
+
+    .timeline h4{
+      color:#ffcc00;
+    }
+
+    @media(max-width:768px){
+      .hero-text h2{
+        font-size:40px;
+      }
+
+      nav{
+        flex-direction:column;
+      }
+
+      nav ul{
+        margin-top:15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <nav>
+      <h1>Virat Kohli</h1>
+
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#biography">Biography</a></li>
+        <li><a href="#career">Career</a></li>
+        <li><a href="#records">Records</a></li>
+        <li><a href="#awards">Awards</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+
+    <div class="hero-text">
+      <h2>Virat Kohli</h2>
+
+      <p>
+        Virat Kohli is one of the greatest cricketers in the history of cricket.
+        He is known for his aggressive batting style, leadership qualities,
+        consistency, fitness, and passion for the game.
+      </p>
+
+      <p>
+        Former captain of the Indian Cricket Team and legendary batsman,
+        Virat Kohli has inspired millions of cricket fans across the world.
+      </p>
+    </div>
+
+    <div class="hero-image">
+      <!-- IMAGE CODE -->
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Virat_Kohli_portrait.jpg" alt="Virat Kohli">
+    </div>
+
+  </section>
+
+  <!-- BIOGRAPHY -->
+  <section id="biography">
+
+    <h3>Complete Biography</h3>
+
+    <div class="card">
+      <p>
+        Virat Kohli was born on 5 November 1988 in Delhi, India.
+        His father Prem Kohli was a criminal lawyer and his mother Saroj Kohli is a homemaker.
+        Virat developed interest in cricket at a very young age.
+      </p>
+
+      <br>
+
+      <p>
+        He joined West Delhi Cricket Academy when he was just 9 years old.
+        His talent and dedication quickly made him one of the best young cricketers in Delhi.
+      </p>
+
+      <br>
+
+      <p>
+        In 2008, Virat Kohli captained the Indian Under-19 team and won the ICC Under-19 World Cup.
+        This became the turning point in his career.
+      </p>
+
+      <br>
+
+      <p>
+        Kohli made his international debut for India in August 2008.
+        Over the years, he became one of the world's best batsmen across all formats.
+      </p>
+
+      <br>
+
+      <p>
+        Virat married famous Bollywood actress Anushka Sharma in 2017.
+        They are one of India's most loved celebrity couples.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- CAREER -->
+  <section id="career">
+
+    <h3>Career Journey</h3>
+
+    <div class="timeline">
+
+      <div>
+        <h4>2008 - International Debut</h4>
+        <p>
+          Virat Kohli made his ODI debut against Sri Lanka.
+        </p>
+      </div>
+
+      <div>
+        <h4>2011 - World Cup Winner</h4>
+        <p>
+          Kohli was part of the Indian team that won the ICC Cricket World Cup 2011.
+        </p>
+      </div>
+
+      <div>
+        <h4>2013 - ODI Ranking No.1</h4>
+        <p>
+          Became one of the top-ranked ODI batsmen in the world.
+        </p>
+      </div>
+
+      <div>
+        <h4>2014 - Test Captain</h4>
+        <p>
+          Became captain of the Indian Test team.
+        </p>
+      </div>
+
+      <div>
+        <h4>2017 - Captain in All Formats</h4>
+        <p>
+          Virat became the full-time captain of India in all formats.
+        </p>
+      </div>
+
+      <div>
+        <h4>2023 - World Cup Heroics</h4>
+        <p>
+          Virat Kohli broke multiple records in ICC Cricket World Cup 2023.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- RECORDS -->
+  <section id="records">
+
+    <h3>Records & Statistics</h3>
+
+    <div class="stats">
+
+      <div class="stat-box">
+        <h4>80+</h4>
+        <p>International Centuries</p>
+      </div>
+
+      <div class="stat-box">
+        <h4>25000+</h4>
+        <p>International Runs</p>
+      </div>
+
+      <div class="stat-box">
+        <h4>2011</h4>
+        <p>World Cup Winner</p>
+      </div>
+
+      <div class="stat-box">
+        <h4>IPL</h4>
+        <p>Royal Challengers Bengaluru Legend</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- AWARDS -->
+  <section id="awards">
+
+    <h3>Awards & Achievements</h3>
+
+    <div class="card">
+
+      <ul>
+        <li>🏆 Arjuna Award (2013)</li>
+        <li>🏆 Padma Shri (2017)</li>
+        <li>🏆 Rajiv Gandhi Khel Ratna (2018)</li>
+        <li>🏆 ICC Cricketer of the Year</li>
+        <li>🏆 ICC ODI Player of the Year</li>
+        <li>🏆 Multiple IPL Records</li>
+      </ul>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      Created with ❤️ for Virat Kohli Fans
+    </p>
+
+    <p>
+      © 2026 Virat Kohli Portfolio Website
+    </p>
+  </footer>
+
+</body>
+</html>

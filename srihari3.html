@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bright Future School</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:#f8fafc;
+      color:#1e293b;
+      line-height:1.6;
+    }
+
+    /* HEADER */
+
+    header{
+      background:linear-gradient(to right,#2563eb,#0ea5e9);
+      padding:15px 50px;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .logo{
+      color:white;
+      font-size:30px;
+      font-weight:bold;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+    }
+
+    nav ul li{
+      margin-left:25px;
+    }
+
+    nav ul li a{
+      text-decoration:none;
+      color:white;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:yellow;
+    }
+
+    /* HERO */
+
+    .hero{
+      min-height:90vh;
+      background:
+      linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+      url('https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1600&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:40px;
+      color:white;
+    }
+
+    .hero-content h1{
+      font-size:65px;
+      margin-bottom:20px;
+    }
+
+    .hero-content p{
+      max-width:700px;
+      margin:auto;
+      font-size:22px;
+      margin-bottom:30px;
+    }
+
+    .hero-content button{
+      padding:15px 35px;
+      border:none;
+      border-radius:40px;
+      background:#facc15;
+      color:black;
+      font-size:18px;
+      cursor:pointer;
+      transition:0.3s;
+      font-weight:bold;
+    }
+
+    .hero-content button:hover{
+      transform:scale(1.1);
+    }
+
+    section{
+      padding:80px 60px;
+    }
+
+    h2{
+      text-align:center;
+      font-size:42px;
+      margin-bottom:50px;
+      color:#2563eb;
+    }
+
+    /* ADMISSIONS */
+
+    .admission-box{
+      background:white;
+      padding:40px;
+      border-radius:20px;
+      box-shadow:0 0 15px rgba(0,0,0,0.1);
+      text-align:center;
+    }
+
+    .admission-box p{
+      max-width:800px;
+      margin:auto;
+      margin-bottom:25px;
+      font-size:18px;
+    }
+
+    .admission-box button{
+      padding:14px 30px;
+      border:none;
+      border-radius:30px;
+      background:#2563eb;
+      color:white;
+      font-size:16px;
+      cursor:pointer;
+    }
+
+    /* FACULTY */
+
+    .faculty-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .faculty-card{
+      background:white;
+      border-radius:20px;
+      overflow:hidden;
+      box-shadow:0 0 12px rgba(0,0,0,0.1);
+      transition:0.4s;
+      text-align:center;
+    }
+
+    .faculty-card:hover{
+      transform:translateY(-10px);
+    }
+
+    .faculty-card img{
+      width:100%;
+      height:280px;
+      object-fit:cover;
+    }
+
+    .faculty-info{
+      padding:20px;
+    }
+
+    .faculty-info h3{
+      color:#2563eb;
+      margin-bottom:10px;
+    }
+
+    /* EVENTS */
+
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:20px;
+    }
+
+    .gallery img{
+      width:100%;
+      border-radius:20px;
+      transition:0.4s;
+    }
+
+    .gallery img:hover{
+      transform:scale(1.05);
+    }
+
+    /* ANNOUNCEMENTS */
+
+    .announcement-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:25px;
+    }
+
+    .announcement-card{
+      background:white;
+      padding:30px;
+      border-left:6px solid #2563eb;
+      border-radius:15px;
+      box-shadow:0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .announcement-card h3{
+      margin-bottom:15px;
+      color:#2563eb;
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:#0f172a;
+      color:white;
+      text-align:center;
+      padding:25px;
+      margin-top:40px;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:768px){
+
+      header{
+        padding:20px;
+      }
+
+      nav{
+        flex-direction:column;
+      }
+
+      nav ul{
+        margin-top:15px;
+        flex-wrap:wrap;
+        justify-content:center;
+      }
+
+      .hero-content h1{
+        font-size:42px;
+      }
+
+      section{
+        padding:70px 20px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+
+    <nav>
+
+      <div class="logo">Bright Future School</div>
+
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#admissions">Admissions</a></li>
+        <li><a href="#faculty">Faculty</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#announcements">Announcements</a></li>
+      </ul>
+
+    </nav>
+
+  </header>
+
+  <!-- HERO -->
+
+  <section class="hero" id="home">
+
+    <div class="hero-content">
+
+      <h1>Welcome to Bright Future ap model School</h1>
+
+      <p>
+        Empowering students with quality education,
+        leadership skills, creativity, and bright opportunities.
+      </p>
+
+      <button>Explore More</button>
+
+    </div>
+
+  </section>
+
+  <!-- ADMISSIONS -->
+
+  <section id="admissions">
+
+    <h2>Admissions Open 2026</h2>
+
+    <div class="admission-box">
+
+      <p>
+        Admissions are now open for the academic year 2026–2027.
+        We provide modern classrooms, smart learning systems,
+        experienced faculty, sports facilities, and excellent academic guidance.
+      </p>
+
+      <button>Apply Now</button>
+
+    </div>
+
+  </section>
+
+  <!-- FACULTY -->
+
+  <section id="faculty">
+
+    <h2>Our Faculty</h2>
+
+    <div class="faculty-container">
+
+      <div class="faculty-card">
+
+        <img src="C:\Users\win-10\Downloads\model.jpeg" alt="">
+
+        <div class="faculty-info">
+
+          <h3>Dr. Rajesh Sharma</h3>
+
+          <p>Principal</p>
+
+        </div>
+
+      </div>
+
+      <div class="faculty-card">
+
+        <img src="C:\Users\win-10\Downloads\sr.jpeg" alt="">
+
+        <div class="faculty-info">
+
+          <h3>Mrs. Priya Reddy</h3>
+
+          <p>Mathematics Teacher</p>
+
+        </div>
+
+      </div>
+
+      <div class="faculty-card">
+
+        <img src="C:\Users\win-10\Downloads\ak.jpeg" alt="">
+
+        <div class="faculty-info">
+
+          <h3>Mr. Arjun Kumar</h3>
+
+          <p>Science Teacher</p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- EVENTS GALLERY -->
+
+  <section id="events">
+
+    <h2>Events Gallery</h2>
+
+    <div class="gallery">
+
+      <img src="C:\Users\win-10\Downloads\hari.jpeg" alt="">
+
+      <img src="C:\Users\win-10\Downloads\hari1.jpeg" alt="">
+
+      <img src="C:\Users\win-10\Downloads\hari2.jpeg" alt="">
+
+      <img src="C:\Users\win-10\Downloads\hari3.jpeg" alt="">
+
+    </div>
+
+  </section>
+
+  <!-- ANNOUNCEMENTS -->
+
+  <section id="announcements">
+
+    <h2>Latest Announcements</h2>
+
+    <div class="announcement-container">
+
+      <div class="announcement-card">
+
+        <h3>Annual Day Celebration</h3>
+
+        <p>
+          Annual Day celebrations will be held on July 15th, 2026.
+        </p>
+
+      </div>
+
+      <div class="announcement-card">
+
+        <h3>Sports Meet Registration</h3>
+
+        <p>
+          Students can register for sports competitions before June 30th.
+        </p>
+
+      </div>
+
+      <div class="announcement-card">
+
+        <h3>Parent Teacher Meeting</h3>
+
+        <p>
+          PTM is scheduled for August 5th, 2026 in the main auditorium.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      © 2026 Bright Future School | All Rights Reserved
+    </p>
+
+  </footer>
+
+</body>
+</html>
